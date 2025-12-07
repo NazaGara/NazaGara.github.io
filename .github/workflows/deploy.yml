@@ -1,0 +1,42 @@
+name: Deploy
+
+on:
+  push:
+    branches: ["main"] 
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repo checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true 
+          fetch-depth: 0
+          
+      - name: Config Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          
+      - name: Config GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build
+        run: hugo --minify 
+      
+      - name: Upload
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
