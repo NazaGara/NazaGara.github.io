@@ -21,7 +21,7 @@
 {{ with site.Params.social }}
 <div class="social-icons">
     {{- range . }}
-    <a href="{{ trim .RelPermalink " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+    <a href="{{ trim .Permalink " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
         title="{{ (.title | default .name) | title }}">
         {{ partial "svg.html" . }}
     </a>

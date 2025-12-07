@@ -19,10 +19,39 @@ theme = 'auto'
 colorPalette = 'default'
 hideHeader = false
 
+# Intro on main page, content in markdown
+homeIntroTitle = 'Hello There!'
+homeIntroContent = """
+I am a Computer Scientist and junior researcher, currently doing my PhD in Computer Science.
+I spent time working with Rust to develop specific algorithms to improve the state-of-the-art in determined scenarios. \\
+Check [about myself](/about) or [my working experience](/experience) for more information.
+"""
+
 # Footer
 showFooter = true
 
-[params.social]
-linkedin = "https://linkedin.com/in/nazareno-garagiola"
-github = "https://github.com/nazagara"
-email = "garagiola@depend.uni-saarland.de"
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://linkedin.com/in/nazareno-garagiola"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/nazagara"
+
+[[params.social]]
+name = "email"
+url = "garagiola@depend.uni-saarland.de"
+
+# Main menu pages
+# [[params.menu]]
+# name = "home"
+# url = "/"
+
+[[params.menu]]
+name = "experience"
+url = "/experience"
+
+[[params.menu]]
+name = "about"
+url = "/about"
