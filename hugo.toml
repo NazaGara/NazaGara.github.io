@@ -3,6 +3,9 @@ title = 'Nazareno Garagiola'
 languageCode = 'en-us'
 defaultContentLanguage = 'en-us'
 
+[taxonomies]
+tag = 'tags'
+
 [module]
 [module.hugoVersion]
 extended = false
@@ -20,12 +23,17 @@ colorPalette = 'default'
 hideHeader = false
 
 # Intro on main page, content in markdown
-homeIntroTitle = 'Hello There!'
+homeIntroTitle = "Hello There!"
 homeIntroContent = """
 I am a Computer Scientist and junior researcher, currently doing my PhD in Computer Science.
 I spent time working with Rust to develop specific algorithms to improve the state-of-the-art in determined scenarios. \\
 Check [about myself](/about) or [my working experience](/experience) for more information.
 """
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = '02 Jan 2006'
 
 # Footer
 showFooter = true
@@ -39,9 +47,9 @@ url = "https://linkedin.com/in/nazareno-garagiola"
 name = "github"
 url = "https://github.com/nazagara"
 
-[[params.social]]
-name = "email"
-url = "garagiola@depend.uni-saarland.de"
+# [[params.social]]
+# name = "email"
+# url = "garagiola@depend.uni-saarland.de"
 
 # Main menu pages
 # [[params.menu]]

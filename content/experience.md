@@ -1,6 +1,6 @@
 ---
-title: "Work Experience"
-description: "Work Experience."
+title: "Working Experience"
+description: "Working Experience."
 hideBackToTop: true
 hidePagination: true
 ---
